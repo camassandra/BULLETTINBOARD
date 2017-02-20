@@ -1,0 +1,23 @@
+{
+  "name": "bullettinassignment",
+  "version": "1.0.0",
+  "description": "cammilla's bullettin with pg and psql",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/camassandra/BULLETTINBOARD.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/camassandra/BULLETTINBOARD/issues"
+  },
+  "homepage": "https://github.com/camassandra/BULLETTINBOARD#readme",
+  "dependencies": {
+    "express": "^4.14.1",
+    "pg": "^6.1.2"
+  }
+}
