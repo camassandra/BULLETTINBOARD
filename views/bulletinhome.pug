@@ -1,0 +1,48 @@
+<!--extends layout-->
+html
+  title Our Bulletin Board Homepage
+  head
+    style
+    link(href='css/styling.css', rel='stylesheet')
+    link(link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet")
+  
+block content
+  .main.container
+    .row
+      .col-md-6.col-md-offset-3
+        
+body
+  P.p <strong> Bulletin Board Homepage </strong>
+    ul.ul
+      li.li
+        a.a(href='/') Home
+      li.li
+        a.a(href='/feeds') All Posts
+       
+    h1.h1 <strong> Feel welcome to post your message here </strong>
+    
+      p.p 
+        a.a(href='http://www.insightmeditationcenter.org/books-articles/articles/introduction-to-meditation-transcripts/') get some inspiration 
+        .row
+  form.col.s12
+    .row
+    .p TITLE of your post
+      .input-field.col.s12
+        input#title(type='password')
+        |  
+        label(for='title') 
+    .row
+    .p BODY of your post
+      .input-field.col.s12
+        input#body(type='email')
+        |  
+        label(for='body') 
+        input.tfbutton(type='submit', value='Post this!')
+ 
+          
+          
+      h2.h2 ps: LALALAND
+    script(src='/js/jquery-3.1.1.min.js')
+    script(src='/js/autocomplete2.js')
+
+  

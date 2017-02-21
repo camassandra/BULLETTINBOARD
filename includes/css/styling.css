@@ -1,0 +1,98 @@
+#html { 
+    background: url(wallpaper.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+#title{
+ padding:18px;
+}
+#body{
+    padding:30px
+}
+#tfheader{
+    background-color:#FAF337;
+    }
+    #tfnewsearch{
+    float:center;
+    padding:20px;
+    }
+    .tftextinput{
+    margin: 0;
+    padding: 5px 15px;
+    font-family: 'Inconsolata', monospace;
+    font-size:14px;
+    border:1px solid #FAF337; border-right:0px;
+    border-top-left-radius: 5px 5px;
+    border-bottom-left-radius: 5px 5px;
+    }
+    .tfbutton {
+    margin: 0;
+    padding: 5px 15px;
+    font-family: 'Inconsolata', monospace;
+    font-size:14px;
+    outline: none;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+    border: solid 1px #3EB0C2; border-right:0px;
+    background: #6EBFCC;
+    background: -webkit-gradient(linear, left top, left bottom, from(#f79e38), to(#0078a5));
+    background: -moz-linear-gradient(top,  #00adee,  #f79e38);
+    border-top-right-radius: 5px 5px;
+    border-bottom-right-radius: 5px 5px;
+    }
+    .tfbutton:hover {
+    text-decoration: none;
+    background: #007ead;
+    background: -webkit-gradient(linear, left top, left bottom, from(#0095cc), to(#00678e));
+    background: -moz-linear-gradient(top,  #0095cc,  #00678e);
+    }
+    /* Fixes submit button height problem in Firefox */
+    .tfbutton::-moz-focus-inner {
+    border: 0;
+    }
+    .tfclear{
+    clear:both;
+    }
+    .h1{
+    font-family: 'Inconsolata', monospace;
+    }
+  .p {
+    font-family: 'Inconsolata', monospace;
+    font-size:18px;
+    }
+  .h2{
+    font-family: 'Inconsolata', monospace;
+    }
+  .ul {
+    
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #f79e38;
+    font-family: 'Inconsolata', monospace;
+    font-size:14px;
+    }
+
+    .li {
+    float: left;
+    font-family: 'Inconsolata', monospace;
+    font-size:14px;
+    }
+
+    .li .a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+    /* Change the link color to #111 (black) on hover */
+    .li .a:hover {
+    background-color: #2185b7;
+    }

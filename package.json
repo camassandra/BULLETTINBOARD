@@ -18,6 +18,8 @@
   "homepage": "https://github.com/camassandra/BULLETTINBOARD#readme",
   "dependencies": {
     "express": "^4.14.1",
-    "pg": "^6.1.2"
+    "pg": "^6.1.2",
+    "pug": "^2.0.0-beta11",
+    "sequelize": "^3.30.2"
   }
 }
