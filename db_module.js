@@ -36,6 +36,6 @@ db.sync({
 .catch((error) => console.log(error));
 
 module.exports = {
-	db: db,
-	AllMessages: Messages
+	Db: db,
+	Messages: Messages
 }

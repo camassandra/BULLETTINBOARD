@@ -21,24 +21,23 @@ body
        
     h1.h1 <strong> Feel welcome to post your message here </strong>
     
-      p.p 
-        a.a(href='http://www.insightmeditationcenter.org/books-articles/articles/introduction-to-meditation-transcripts/' target='_blank') get some inspiration 
+      p.p And share it with us.... 
         .row
-  form.col.s12
+  form.col.s12(method='post', action='/posthandler')
     .row
-    .p TITLE of your post
+    .p.input-field.col.s12 TITLE of your post
       .input-field.col.s12
-        input#title(type='text')
-        
+        input.input-field.col.s12(type='text', id='title' name='titlepostqr')
     .row
-    .p BODY of your post
+    .p.input-field.col.s12 BODY of your post
       .input-field.col.s12
-        input#body( type='text')
+        input.input-field.col.s12(type='text', id='body', name='bodypostqr')
         |   
         input.tfbutton(type='submit', value='Post this!')
  
           
-      h2.h2 ps: LALALAND
+      h2.h2 
+        a.a(href='http://www.insightmeditationcenter.org/books-articles/articles/introduction-to-meditation-transcripts/' target='_blank') get some inspiration 
     script(src='/js/jquery-3.1.1.min.js')
     script(src='/js/autocomplete2.js')
 

@@ -21,9 +21,9 @@ body
       
     .h1 <strong> This is what people posted. Ain't it awesome </strong>
     .p 
-    each Post in posts
-    .p #{Post.title}, 
-    .p #{Post.body},
+     each Post in posts
+      p#postitle #{Post.title}
+      p#postbody #{Post.body}
   
           
       

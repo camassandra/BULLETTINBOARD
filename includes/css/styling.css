@@ -5,11 +5,25 @@
     -o-background-size: cover;
     background-size: cover;
   }
-#title{
- padding:18px;
+
+.input-field.col.s12{
+     padding:18px;
 }
-#body{
-    padding:30px
+
+#postitle{
+    font-size: 16px;
+    font-weight: 700;
+    padding: 5px;
+    background-color:#F0A1E1;
+    border-color: #B50E97;
+    border-style: solid;
+}
+
+#postbody{
+    padding: 10px;
+    font-weight: 400;
+    border-color: #F0A1E1;
+    border-style: dotted;
 }
 
 #tfheader{
@@ -58,9 +72,12 @@
     .tfclear{
     clear:both;
     }
+
     .h1{
     font-family: 'Inconsolata', monospace;
+    font-size: 26px;
     }
+
   .p {
     font-family: 'Inconsolata', monospace;
     font-size:18px;
@@ -76,13 +93,13 @@
     overflow: hidden;
     background-color: #f79e38;
     font-family: 'Inconsolata', monospace;
-    font-size:14px;
+    font-size:20px;
     }
 
     .li {
     float: left;
     font-family: 'Inconsolata', monospace;
-    font-size:14px;
+    font-size:20px;
     }
 
     .li .a {
@@ -96,4 +113,6 @@
     /* Change the link color to #111 (black) on hover */
     .li .a:hover {
     background-color: #2185b7;
+    background: -webkit-gradient(linear, left top, left bottom, from(#0095cc), to(#00678e));
+    background: -moz-linear-gradient(top,  #0095cc,  #00678e);
     }

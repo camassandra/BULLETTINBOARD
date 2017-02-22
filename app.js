@@ -4,7 +4,7 @@ var express = require('express');
 const app = express();
 var bodyParser = require('body-parser')
 
-const db = require(__dirname +'/db_module.js')
+const Db = require(__dirname +'/db_module.js')
 
 //here comes the middleware stuff!
 
@@ -24,18 +24,45 @@ app.set('view engine', 'pug');
 // }
 
 app.get('/', function(request, response){
+	console.log('rendering homepage')
 	response.render('bulletinhome')
 })
 
-//route to 
+//posting new message
+app.post('/posthandler', function(request, response){
+	var titlepostqr = request.body.titlepostqr
+ Db.Messages.create({
+ 	title: titlepostqr,
+ 	body: request.body.bodypostqr
+ }).then( f => {
+ 	response.redirect('/feeds')
+ })
+
+	
+});
+
+
+
+//just hypothetically In case you want to look up a post.... ????
+// app.post('/posthandler', function(request, response){
+// 	console.log('handling post')
+//var titlepostqr = request.body.titlepostqr
+// 	var bodypostqr = request.body.bodypostqr
+// 	console.log(titlepostqr)
+
+// 	response.render('postrender', {postfound: data[i]})
+// });
+
+//route to all posts
 app.get('/feeds', function(request, response){
-    db.findAll()
+	console.log('going to feeds')
+    Db.Messages.findAll()
     .then((allPosts) => {
         console.log('logging allPosts')
-        console.log(allPosts)
-        response.send({posts: AllMessages})
+        //console.log(allPosts)
+        response.render('feeds', {posts: allPosts})
     })    
-})
+});
 
 
 
