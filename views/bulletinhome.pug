@@ -1,6 +1,6 @@
 <!--extends layout-->
 html
-  title Our Bulletin Board Homepage
+  title Bulletin Homepage
   head
     style
     link(href='css/styling.css', rel='stylesheet')
@@ -12,7 +12,7 @@ block content
       .col-md-6.col-md-offset-3
         
 body
-  P.p <strong> Bulletin Board Homepage </strong>
+  P.p <strong> Our Bulletin Board Homepage </strong>
     ul.ul
       li.li
         a.a(href='/') Home
@@ -22,24 +22,21 @@ body
     h1.h1 <strong> Feel welcome to post your message here </strong>
     
       p.p 
-        a.a(href='http://www.insightmeditationcenter.org/books-articles/articles/introduction-to-meditation-transcripts/') get some inspiration 
+        a.a(href='http://www.insightmeditationcenter.org/books-articles/articles/introduction-to-meditation-transcripts/' target='_blank') get some inspiration 
         .row
   form.col.s12
     .row
     .p TITLE of your post
       .input-field.col.s12
-        input#title(type='password')
-        |  
-        label(for='title') 
+        input#title(type='text')
+        
     .row
     .p BODY of your post
       .input-field.col.s12
-        input#body(type='email')
-        |  
-        label(for='body') 
+        input#body( type='text')
+        |   
         input.tfbutton(type='submit', value='Post this!')
  
-          
           
       h2.h2 ps: LALALAND
     script(src='/js/jquery-3.1.1.min.js')

@@ -12,15 +12,18 @@ block content
       .col-md-6.col-md-offset-3
         
 body
-  P.p <strong> Our Bulletin Board - Overview </strong>
+  .p <strong> Our Bulletin Board - Overview </strong>
     ul.ul
       li.li
         a.a(href='/') Home
       li.li
         a.a(href='/feeds') All Posts
       
-    h1.h1 <strong> This is what people posted. Ain't it awesome </strong>
-    .p
+    .h1 <strong> This is what people posted. Ain't it awesome </strong>
+    .p 
+    each Post in posts
+    .p #{Post.title}, 
+    .p #{Post.body},
   
           
       
