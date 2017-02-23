@@ -36,29 +36,40 @@ app.post('/posthandler', function(request, response){
  	body: request.body.bodypostqr
  }).then( f => {
  	response.redirect('/feeds')
- })
+ 			})
 
-	
 });
 
 
 
 //just hypothetically In case you want to look up a post.... ????
-// app.post('/posthandler', function(request, response){
-// 	console.log('handling post')
-//var titlepostqr = request.body.titlepostqr
-// 	var bodypostqr = request.body.bodypostqr
-// 	console.log(titlepostqr)
+app.post('/searchhandler', function(request, response){
+    var titlequery = request.body.searchquery
+	console.log(titlequery)
+	var titlequeryLowercase = titlequery.toLowerCase()
+	Db.Messages.findAll()
+	.then((Allposts) => {
+		console.log('first post title is ' + Allposts[0].title)
+		for (var i = 0; i < Allposts.length; i++) {
+			var lowercasetitle = Allposts[i].title.toLowerCase()
 
-// 	response.render('postrender', {postfound: data[i]})
-// });
+			if (lowercasetitle.indexOf(titlequeryLowercase)> -1) {
+				console.log('getting here')
+				
+				console.log(lowercasetitle)
+				response.render('success', {postfound: Allposts[i]})
+			}
+			else console.log('not found')
+		}
+	})
+});
 
 //route to all posts
 app.get('/feeds', function(request, response){
 	console.log('going to feeds')
     Db.Messages.findAll()
     .then((allPosts) => {
-        console.log('logging allPosts')
+        //console.log('logging allPosts')
         //console.log(allPosts)
         response.render('feeds', {posts: allPosts})
     })    

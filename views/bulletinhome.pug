@@ -22,6 +22,7 @@ body
     h1.h1 <strong> Feel welcome to post your message here </strong>
     
       p.p And share it with us.... 
+      a.a(href='http://www.insightmeditationcenter.org/books-articles/articles/introduction-to-meditation-transcripts/' target='_blank') get some inspiration 
         .row
   form.col.s12(method='post', action='/posthandler')
     .row
@@ -33,12 +34,17 @@ body
       .input-field.col.s12
         input.input-field.col.s12(type='text', id='body', name='bodypostqr')
         |   
-        input.tfbutton(type='submit', value='Post this!')
+        input.tfbutton(type='submit', value='Post It!')
  
           
-      h2.h2 
-        a.a(href='http://www.insightmeditationcenter.org/books-articles/articles/introduction-to-meditation-transcripts/' target='_blank') get some inspiration 
-    script(src='/js/jquery-3.1.1.min.js')
-    script(src='/js/autocomplete2.js')
+      h2.h2 Or search for any post on this bullettin by TITLE 
+      p.p 
+      #tfheader
+  form#tfnewsearch(method='post', action='/searchhandler')
+          input.tftextinput(list="suggestion-box", type='text', name='searchquery', id='searchinput' placeholder="TYPE A TITLE", size='21', maxlength='120')
+          datalist#suggestion-box
+          input.tfbutton(type='submit', value='Search!')
+        
+
 
   
